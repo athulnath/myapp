@@ -1,6 +1,16 @@
 
 $(function() {
-var model = new TaskModel(),
-    view = new TaskView(model),
-    controller = new TaskController(model, view);
+
+var route =  new window.app.Router();
+
+route.addRoute('home');
+route.addRoute('/news', function(){
+  alert("new path");
+});
+
+route.init();
+ 
+//update URL fragment generating new history record
+route.setPath('home');
+
 });

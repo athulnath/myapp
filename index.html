@@ -2,6 +2,9 @@
     <head>
         <link rel="stylesheet"  href="css/style.css">
         <script src="js/externals/jquery.min.js"></script>
+        <script src="js/externals/js-signals.js"></script>
+        <script src="js/externals/hasher.js"></script>
+        <script src="js/externals/crossroads.js"></script>
     </head>
     <body>
 
@@ -9,22 +12,19 @@
     <div class="js-container">
 
         <input type="text" class="js-task-textbox">
-        <input type="button" class="js-add-task-button" value="Add Task">
+        <input type="button" class="js-add-task-button" value="Add Note">
 
-        <div class="js-tasks-container"></div>
-        <!-- end tasks -->
-        <input type="button" class="js-complete-task-button" value="Complete Tasks">
-        <input type="button" class="js-delete-task-button" value="Delete Tasks">
+        <div class="js-notes-container"></div>
+
+
+        <a href="#news">test</a>
 
     </div>
     <!-- end js-container -->
 
 
 
-    <script src="js/EventDispatcher.js"></script>
-    <script src="js/TaskModel.js"></script>
-    <script src="js/TaskView.js"></script>
-    <script src="js/TaskController.js"></script>
+    <script src="js/utils/Router.js"></script>
     <script src="js/App.js"></script>
     
     </body>
