@@ -1,9 +1,6 @@
-(function() {
-    app.config.addRoute('/', function() {
-        alert('home');
-    })
-       .addRoute('/news', function() {
-           alert("news");
-       });
-
-})(window.app = window.app || {});
+define(function() {
+    return [
+        {path: "/", controller: "HomeController"},
+        {path: "/add", controller: "AddController"}
+    ];
+});

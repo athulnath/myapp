@@ -1,4 +1,4 @@
-(function(app) {
+define(['config/routes'], function(routes){
 
     function Router() {
 
@@ -17,20 +17,22 @@
     }
     
     Router.prototype.initRoute = function(newHash, oldHash) {
-        var routes = window.app.config.getRoutes();
         for(var key in routes) {
             this.addRoute(routes[key].path, routes[key].controller);
         }
     }
 
-    Router.prototype.addRoute = function(routeName, handler) {
-        crossroads.addRoute(routeName, handler);
+    Router.prototype.addRoute = function(routeName, controllerName) {
+        crossroads.addRoute(routeName, function() {
+            require(['controllers/' + controllerName], function(controller) {
+                controller.init();
+            });
+        });
     }
 
     Router.prototype.setPath = function(path) {
         hasher.setHash(path);
     }
 
-    window.app.Router = Router;
-
-})(window.app = window.app || {});
+    return Router;
+});
