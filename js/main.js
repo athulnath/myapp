@@ -5,7 +5,6 @@ requirejs.config({
 });
 
 
-require(["controllers/HomeController", "utils/Router"], function(HomeController, Router) {
-    var router = new Router();
-    router.init();
+require(["core/Router"], function(Router) {
+    (new Router()).init();
 });
