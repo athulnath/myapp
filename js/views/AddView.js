@@ -1,14 +1,14 @@
-define(["jquery", "mustache"], function($, Mustache){
+define(["jquery", "core/View"], function($, View){
 
-    function render() {
-        $.get('templates/addnote.html', function(template) {
-             var rendered = Mustache.render(template);
-            $("#app").html(rendered);
-        });
-
+    function AddView() {
+        View.call(this);
     }
 
-    return {
-        render:render
+    AddView.prototype = Object.create(View.prototype);
+
+    AddView.prototype.render = function(){
+        this.renderToApp("addnote.html");
     }
+
+    return AddView;
 });

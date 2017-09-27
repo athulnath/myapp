@@ -1,13 +1,14 @@
-define(["jquery", "mustache"], function($, Mustache){
+define(["jquery", "mustache", "core/View"], function($, Mustache, View){
 
-    function render() {
-        $.get('templates/home.html', function(template) {
-             var rendered = Mustache.render(template, {note1: "data 1", note2: "data 2"});
-            $("#app").html(rendered);
-        });
+    function HomeView() {
+        View.call(this);
     }
 
-    return {
-        render:render
+    HomeView.prototype = Object.create(View.prototype);
+
+    HomeView.prototype.render = function(){
+        this.renderToApp("home.html", {note1: "data 1", note2: "data 2"} );
     }
+
+    return HomeView;
 });

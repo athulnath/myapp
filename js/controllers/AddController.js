@@ -1,7 +1,7 @@
 define(['models/Note', 'views/AddView'], function(Note, AddView) {
 
     function init(){
-        AddView.render();
+        (new AddView()).render();
     }
 
     return {
