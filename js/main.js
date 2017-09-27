@@ -5,6 +5,7 @@ requirejs.config({
 });
 
 
-require(["core/Router"], function(Router) {
+require(["core/Router", 'config/routes'], function(Router, routes) {
+    routes.loadConfig();
     (new Router()).init();
 });

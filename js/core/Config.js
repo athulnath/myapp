@@ -3,16 +3,17 @@ define(function(){
     var _routes = [];
 
     function getRoutes() {
-        return this._routes;
+        return _routes;
     }
 
     function addRoute(route) {
-        this._routes.push(route);
+        _routes.push(route);
         return this;
     }
 
     return {
-        addRoute: addRoute
+        addRoute: addRoute,
+        getRoutes: getRoutes
     };
 
 });

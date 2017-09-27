@@ -18,6 +18,7 @@ define(['core/Config'], function(Config){
     
     Router.prototype.initRoute = function(newHash, oldHash) {
         var routes = Config.getRoutes();
+        console.log(routes);
         for(var key in routes) {
             this.addRoute(routes[key].path, routes[key].controller);
         }
