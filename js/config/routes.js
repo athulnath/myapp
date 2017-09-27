@@ -1,6 +1,9 @@
-define(function() {
-    return [
-        {path: "/", controller: "HomeController"},
-        {path: "/add", controller: "AddController"}
-    ];
+require(["core/Config"], function(Config) {
+    Config.addRoute({
+            path: "/", 
+            controller: "HomeController"
+        }).addRoute({
+            path: "/add", 
+            controller: "AddController"
+        });
 });
