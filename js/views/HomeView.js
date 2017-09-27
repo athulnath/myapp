@@ -1,9 +1,9 @@
 define(["jquery"], function($){
 
     function render() {
-        var initScreenSample = '<ul><li>Note 1</li><li>Note 2</li></ul>'+
-                                    '<div class="js-notes-container"><a href="#add">Add</a></div>';
-        $("#app").html(initScreenSample);
+        $.get('templates/home.html', function(template) {
+            $("#app").html(template);
+        });
     }
 
     return {
