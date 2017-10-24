@@ -1,7 +1,7 @@
 /*!
- * Start Bootstrap - Createive v4.0.0-beta (http://startbootstrap.com/template-overviews/creative)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
+ * Start Bootstrap -  v1.0.0 (https://github.com/athulnath/myapp#readme)
+ * Copyright 2013-2017 
+ * Licensed under ISC (https://github.com/BlackrockDigital/myapp/blob/master/LICENSE)
  */
 body,
 html {
@@ -251,6 +251,27 @@ header.masthead {
   padding: 50px 0; }
   .call-to-action h2 {
     margin: 0 auto 20px; }
+
+.square-box {
+  position: relative;
+  width: 25%;
+  overflow: hidden;
+  background: #eb3812; }
+
+.square-box:before {
+  content: "";
+  display: block;
+  padding-top: 100%; }
+
+.square-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  padding: 10px; }
 
 .text-primary {
   color: #F05F40 !important; }

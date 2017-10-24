@@ -1,6 +1,7 @@
-define(['models/Note', 'views/HomeView'], function(Note, HomeView) {
+define(['models/Note', 'views/HomeView', 'jquery', 'jqueryui'], function(Note, HomeView, $) {
 
     function init(){
+        $("#draggable").draggable();
         (new HomeView()).render();
     }
 

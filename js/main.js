@@ -1,6 +1,7 @@
 requirejs.config({
     paths: {
         'jquery': 'externals/jquery.min',
+        'jqueryui': 'externals/jquery-ui',
         'mustache': "externals/mustache.min"
     }
 });
